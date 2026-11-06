@@ -1,0 +1,26 @@
+.no-item-box {
+  width: 80%;
+  border: 3px dashed #3a5a40;
+  border-radius: 10px;
+  padding: 25px 20px;
+  color: #3a5a40;
+  margin: 0 auto;
+}
+
+.no-items-heading {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.cart-description {
+  font-size: 20px;
+}
+
+.svg-smile {
+  height: 50px;
+  width: 50px;
+  display: inline;
+  fill: #3a5a40;
+  vertical-align: middle;
+  margin-left: 10px;
+}

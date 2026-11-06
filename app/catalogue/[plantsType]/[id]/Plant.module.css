@@ -1,0 +1,71 @@
+.main-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.plant-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid #e5e0d8;
+  border-radius: 20px;
+  padding: 32px;
+}
+
+.plant-name {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1c2826;
+}
+
+.little-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e0d8;
+}
+
+.plant-rating {
+  font-size: 16px;
+  font-weight: 700;
+  color: #d97757;
+  background: #fbeee9;
+  padding: 6px 14px;
+  border-radius: 1000px;
+}
+
+.plant-price {
+  font-size: 32px;
+  font-weight: 800;
+  color: #3a5a40;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.description-heading {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9c9c9c;
+}
+
+.plant-description {
+  font-size: 18px;
+  color: #1c2826;
+}

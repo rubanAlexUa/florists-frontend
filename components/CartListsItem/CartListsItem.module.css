@@ -1,0 +1,125 @@
+.cart-list-item {
+  box-shadow: 0 4px 14px rgba(28, 40, 38, 0.08);
+  border-radius: 10px;
+  gap: 40px;
+  width: 90%;
+  padding: 20px;
+  display: flex;
+}
+/* .cart-list-item::after {
+  content: "";
+  position: absolute;
+  left: 250px;
+  right: 10px;
+  bottom: 0;
+  height: 1px;
+  background: #1c2826;
+} */
+
+.product-image {
+  object-fit: cover;
+}
+
+.product-total-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.top-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.product-info-main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #d97757;
+}
+
+.product-totalPrice {
+  font-size: 30px;
+  font-weight: 600;
+  font-style: italic;
+  color: #d97757;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-amount-heading {
+  font-size: 25px;
+  font-weight: 500;
+  color: #d97757;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.amount-changer {
+  display: flex;
+  width: 500px;
+  align-items: flex-end;
+}
+
+.dots {
+  flex: 1;
+  margin: 0 8px 12px;
+  border-bottom: 2px dotted #d97757;
+}
+
+.product-amount-heading,
+.product-amount-number {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 8px;
+  color: #d97757;
+}
+
+.product-amount-number {
+  margin-right: 20px;
+}
+
+.button-action {
+  border: 4px solid #d97757;
+  border-radius: 8px;
+}
+
+.symbol-action {
+  stroke: #d97757;
+}
+
+.button-delete {
+  width: 199px;
+  font-weight: 800;
+  color: white;
+  background-color: #d96857;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(217, 119, 87, 0.35);
+  transition:
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.button-delete:hover {
+  background: #c4623f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(217, 119, 87, 0.4);
+}
+
+.button-delete:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(217, 119, 87, 0.3);
+}

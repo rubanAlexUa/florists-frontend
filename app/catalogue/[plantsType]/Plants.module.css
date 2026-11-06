@@ -1,0 +1,11 @@
+.page-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.product-category {
+  color: #9c9c9c;
+  font-size: 20px;
+  font-weight: 200;
+}

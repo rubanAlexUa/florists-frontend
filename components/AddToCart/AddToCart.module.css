@@ -1,0 +1,44 @@
+.more-amount-wrapper {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1c2826;
+  background-color: #fbeee9;
+  padding: 10px;
+}
+
+.amount-number {
+}
+
+.available-amount {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #d97757;
+  color: #fbeee9;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -15px;
+  right: -20px;
+  font-size: 15px;
+}
+
+.amount-heading {
+  font-size: 25px;
+  position: relative;
+}
+
+.amount-info-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.amount-button {
+  padding: 5px;
+  stroke: #d97757;
+  border: 2px solid #d97757;
+  background-color: #fbeee9;
+  border-radius: 10px;
+}

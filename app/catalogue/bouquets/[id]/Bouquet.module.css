@@ -1,0 +1,43 @@
+.plant-flowers-info {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.flower-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100px;
+  align-items: center;
+}
+
+.img-box {
+  height: 100px;
+  width: 100px;
+}
+
+.flower-image {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fbeee9;
+  border-radius: 5px;
+}
+
+.flower-amount-box {
+  border: 1px solid #d97757;
+  color: #d97757;
+  background-color: #fbeee9;
+  padding: 10px;
+  max-width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: 500;
+}
