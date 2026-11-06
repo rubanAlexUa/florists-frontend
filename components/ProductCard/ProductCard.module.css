@@ -35,3 +35,32 @@
   bottom: 10px;
   right: 10px;
 }
+
+.button-go-cart {    
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  border-radius: 8px;
+  padding: 5px 20px;
+  font-weight: 800;
+  color: white;
+  background-color: #d96857;
+  border: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(217, 119, 87, 0.35);
+  transition:
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+.button-go-cart:hover {
+  background: #c4623f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(217, 119, 87, 0.4);
+}
+
+.button-go-cart:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(217, 119, 87, 0.3);
+}

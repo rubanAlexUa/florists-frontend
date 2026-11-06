@@ -5,6 +5,7 @@
   width: 90%;
   padding: 20px;
   display: flex;
+  background-color: white;
 }
 /* .cart-list-item::after {
   content: "";

@@ -1,20 +1,20 @@
-"use client";
-import { registration } from "@/lib/auth";
-import css from "./SignUp.module.css";
-import Link from "next/link";
+'use client';
+import {registration} from '@/lib/auth';
+import css from './SignUp.module.css';
+import Link from 'next/link';
 
 const SignUp = async () => {
-  function handleSubmit(formData: FormData) {
-    const username = formData.get("username") as string;
-    const password = formData.get("password") as string;
-    const email = formData.get("email") as string;
+  // function handleSubmit(formData: FormData) {
+  //   const username = formData.get("username") as string;
+  //   const password = formData.get("password") as string;
+  //   const email = formData.get("email") as string;
 
-    try{
-      const user = await registration({username?,})
-    }
-  }
+  //   try{
+  //     const user = await registration({username?, email, password})
+  //   }
+  // }
   return (
-    <form action={handleSubmit} className={css.form}>
+    <form className={css.form}>
       <h1 className={css.heading}>Registration</h1>
       <label htmlFor="username-input" className={css.label}>
         Username:
@@ -50,8 +50,9 @@ const SignUp = async () => {
           required
         />
       </label>
-      <button className={css["submit-button"]}>Register</button>
-      <p className={css["login-text"]}>
+      <label htmlFor="">Your Role:</label>
+      <button className={css['submit-button']}>Register</button>
+      <p className={css['login-text']}>
         Already have an account? <Link href="/sign-in">Log in</Link>
       </p>
     </form>

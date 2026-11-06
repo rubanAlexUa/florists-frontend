@@ -1,6 +1,6 @@
-import { User } from "@/types/User";
-import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import {User} from '@/types/user';
+import {create} from 'zustand';
+import {persist} from 'zustand/middleware';
 
 // const initialValue: UserGet = {
 //   username: "",
@@ -20,11 +20,11 @@ interface userStore {
 
 export const useUserStore = create<userStore>()(
   persist(
-    (set) => ({
+    set => ({
       user: null,
-      setUser: (user: UserGet) => set(() => ({ user })),
-      logoutUser: () => set(() => ({ user: null })),
+      setUser: (user: UserGet) => set(() => ({user})),
+      logoutUser: () => set(() => ({user: null})),
     }),
-    { name: "user" },
+    {name: 'user'},
   ),
 );

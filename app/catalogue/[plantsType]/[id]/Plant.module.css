@@ -4,6 +4,10 @@
   gap: 40px;
 }
 
+.image-wrappers{
+  min-width: 40%;
+}
+
 .plant-image {
   width: 100%;
   height: auto;
