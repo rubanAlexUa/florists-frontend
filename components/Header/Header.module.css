@@ -104,6 +104,13 @@
   transform: translateX(2px) scale(0.98);
 }
 
+.profile-svg {
+  width: 50px;
+  font-weight: 200;
+  stroke: #2a4230;
+  fill: transparent;
+}
+
 .cart-link {
   position: relative;
 }
@@ -122,4 +129,35 @@
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+}
+
+.cart-image {
+  width: 50px;
+  stroke: #2a4230;
+  fill: transparent;
+}
+
+.buttons-wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+.auth-button {
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+.log-in-button {
+  background-color: #3a5a40;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 25px;
+}
+
+.sign-up-button {
+  border: 5px solid #3a5a40;
 }
