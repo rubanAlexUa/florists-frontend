@@ -5,6 +5,7 @@ import './globals.css';
 import Header from '@/components/Header/Header';
 import TanctackProvider from '@/components/Tanstack Provider/TanstackProvider';
 import TanstackProvider from '@/components/Tanstack Provider/TanstackProvider';
+import AuthProvider from '@/components/AuthProvider/AuthProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -34,8 +35,7 @@ export default function RootLayout({children}: LayoutProps<'/'>) {
       className={`${geistSans.variable} ${geistMono.variable} ${mPlusRounded.variable}`}>
       <body>
         <TanstackProvider>
-          <Header />
-          {children}
+          <AuthProvider>{children}</AuthProvider>
         </TanstackProvider>
       </body>
     </html>

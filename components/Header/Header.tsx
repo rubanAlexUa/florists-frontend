@@ -90,7 +90,7 @@ const Header = () => {
           <ul className={css['header-navigation']}>
             <li className={css['nav-item']}>
               <Link href="/profile" className={css['profile-link']}>
-                <span className={css.username}>username</span>
+                <span className={css.username}>{user.username}</span>
                 <Profile className={css['profile-svg']} />
               </Link>
             </li>

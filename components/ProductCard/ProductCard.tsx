@@ -7,6 +7,8 @@ import {
   getPlantsTypeByBackend,
   PlantsTypes,
 } from '@/constants/plantsTypes';
+import Plus from '@/public/plus.svg';
+
 export type ProductCardData = {
   id: string;
   name: string;
@@ -71,35 +73,7 @@ const ProductCard = ({
               amount,
             });
           }}>
-          <svg
-            width={50}
-            height={50}
-            viewBox="0 0 32 32"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M16 31C24.2843 31 31 24.2843 31 16C31 7.71573 24.2843 1 16 1C7.71573 1 1 7.71573 1 16C1 24.2843 7.71573 31 16 31Z"
-              fill="#F9F6F0"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke="#E5E0D8"
-            />
-            <path
-              d="M16 9.99994V21.9999"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke="#E5E0D8"
-            />
-            <path
-              d="M10 16H22"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              stroke="#E5E0D8"
-            />
-          </svg>
+          <Plus className={css['add-cart-svg']} />
         </button>
       ) : (
         <Link href="/cart" className={css['button-go-cart']}>

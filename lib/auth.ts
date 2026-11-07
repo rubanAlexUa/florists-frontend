@@ -1,8 +1,6 @@
-import axios from "axios";
-import { User } from "@/types/user";
-import { USER_ROLES } from "@/constants/userRoles";
-
-axios.defaults.baseURL = "https://florists-backend.onrender.com";
+import {api} from './api';
+import {User} from '@/types/user';
+import {USER_ROLES} from '@/constants/userRoles';
 
 interface RegisterProps {
   username?: string;
@@ -12,7 +10,7 @@ interface RegisterProps {
 }
 
 export const registration = async (data: RegisterProps) => {
-  const res = await axios.post<User>("/auth/register", data);
+  const res = await api.post<User>('/auth/register', data);
   return res.data;
 };
 
@@ -22,10 +20,19 @@ interface LoginProps {
 }
 
 export const login = async (data: LoginProps) => {
-  const res = await axios.post<User>("/auth/login", data);
+  const res = await api.post<User>('/auth/login', data);
   return res.data;
 };
 
-export const refresh = () => {};
+export const refresh = async () => {
+  await api.post('/auth/refresh');
+};
 
-export const createSession = () => {};
+export const logout = async () => {
+  await api.post('/auth/logout');
+};
+
+export const getMe = async () => {
+  const res = await api.get<User>('/user/me');
+  return res.data;
+};

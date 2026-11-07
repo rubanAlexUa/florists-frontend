@@ -1,26 +1,26 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
-import { registration } from "@/lib/auth";
-import css from "./SignUp.module.css";
-import { useUserStore } from "@/lib/store/userStore";
+import Link from 'next/link';
+import {useRouter} from 'next/navigation';
+import {registration} from '@/lib/auth';
+import css from './SignUp.module.css';
+import {useUserStore} from '@/lib/store/userStore';
 
 const SignUp = () => {
   const router = useRouter();
 
-  const setUser = useUserStore((state) => state.setUser);
+  const setUser = useUserStore(state => state.setUser);
 
   async function handleSubmit(formData: FormData) {
-    const username = formData.get("username") as string;
-    const password = formData.get("password") as string;
-    const email = formData.get("email") as string;
-    const role = formData.get("role") as "customer" | "seller";
+    const username = formData.get('username') as string;
+    const password = formData.get('password') as string;
+    const email = formData.get('email') as string;
+    const role = formData.get('role') as 'customer' | 'seller';
 
     try {
-      const newUser = await registration({ username, password, email, role });
+      const newUser = await registration({username, password, email, role});
       setUser(newUser);
-      router.push("/");
+      router.push('/');
     } catch {}
   }
   return (
@@ -62,33 +62,33 @@ const SignUp = () => {
       </label>
       <fieldset className={css.fieldset}>
         <legend className={css.legend}>Your Role:</legend>
-        <div className={css["radio-group"]}>
-          <label className={css["radio-label"]}>
+        <div className={css['radio-group']}>
+          <label className={css['radio-label']}>
             <input
               type="radio"
               name="role"
               value="customer"
-              className={`${css["radio-input"]} ${css["radio-customer"]}`}
+              className={`${css['radio-input']} ${css['radio-customer']}`}
               defaultChecked
               required
             />
-            <span className={css["radio-text"]}>Customer</span>
+            <span className={css['radio-text']}>Customer</span>
           </label>
 
-          <label className={css["radio-label"]}>
+          <label className={css['radio-label']}>
             <input
               type="radio"
               name="role"
               value="seller"
-              className={`${css["radio-input"]}  ${css["radio-seller"]}`}
+              className={`${css['radio-input']}  ${css['radio-seller']}`}
             />
-            <span className={css["radio-text"]}>Seller</span>
+            <span className={css['radio-text']}>Seller</span>
           </label>
         </div>
       </fieldset>
-      <button className={css["submit-button"]}>Register</button>
-      <p className={css["login-text"]}>
-        Already have an account? <Link href="/sign-in">Log in</Link>
+      <button className={css['submit-button']}>Register</button>
+      <p className={css['login-text']}>
+        Already have an account? <Link href="/log-in">Log in</Link>
       </p>
     </form>
   );

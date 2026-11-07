@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import css from './SignIn.module.css';
-const SignInPage = () => {
+const LogInPage = () => {
   return (
     <form className={css.form}>
       <h1 className={css.heading}>Authorization</h1>
@@ -37,4 +37,4 @@ const SignInPage = () => {
   );
 };
 
-export default SignInPage;
+export default LogInPage;

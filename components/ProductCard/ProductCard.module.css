@@ -36,7 +36,11 @@
   right: 10px;
 }
 
-.button-go-cart {    
+.add-cart-svg {
+  width: 50px;
+}
+
+.button-go-cart {
   position: absolute;
   bottom: 10px;
   right: 10px;
