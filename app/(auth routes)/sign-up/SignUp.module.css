@@ -97,3 +97,83 @@
   background: #fbeee9;
   border-radius: 10px;
 }
+.fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend {
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #1c2826;
+}
+
+.radio-group {
+  display: flex;
+  gap: 12px;
+}
+
+.radio-label {
+  flex: 1;
+  position: relative;
+  cursor: pointer;
+}
+
+/* ховаємо стандартну радіокнопку, але лишаємо доступною для клавіатури */
+.radio-input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.radio-text {
+  display: block;
+  padding: 12px 14px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1c2826;
+  background: #f9f6f0;
+  border: 1px solid #e5e0d8;
+  border-radius: 12px;
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    background-color 200ms ease,
+    color 200ms ease;
+}
+.radio-input.radio-customer:checked + .radio-text {
+  background: #3a5a40;
+  border-color: #3a5a40;
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(58, 90, 64, 0.2);
+}
+
+.radio-input.radio-customer:focus-visible + .radio-text {
+  box-shadow: 0 0 0 3px rgba(58, 90, 64, 0.35);
+}
+
+.radio-input.radio-seller:checked + .radio-text {
+  background: #d97757;
+  border-color: #d97757;
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.25);
+}
+
+.radio-input.radio-seller:focus-visible + .radio-text {
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.4);
+}
+
+.radio-input.radio-customer:not(:checked):hover + .radio-text {
+  border-color: #3a5a40;
+}
+
+.radio-input.radio-seller:not(:checked):hover + .radio-text {
+  border-color: #d97757;
+}
