@@ -1,0 +1,96 @@
+.order-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(28, 40, 38, 0.08);
+}
+
+.all-product-info-box {
+  display: flex;
+  gap: 15px;
+}
+
+.image-product-wrapper {
+  max-width: 200px;
+}
+
+.product-image {
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-info-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+}
+
+.top-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-name {
+  font-size: 25px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.product-total-price {
+  font-size: 30px;
+  color: #c4623f;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 17px;
+  color: gray;
+}
+
+.product-add-info-num {
+  color: black;
+  font-weight: 500;
+  margin-left: 5px;
+}
+
+.button-delete-product {
+  border: 2px solid #d97757;
+  color: #d97757;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 500;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.button-delete-product:hover {
+  color: white;
+  background-color: #d97757;
+  transform: translateY(-2px);
+}
+
+.button-delete-product:active {
+  color: white;
+  background: #c4623f;
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(217, 119, 87, 0.3);
+}
