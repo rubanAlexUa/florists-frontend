@@ -4,7 +4,7 @@ import Link from 'next/link';
 import {useRouter} from 'next/navigation';
 import {registration} from '@/lib/auth';
 import css from './SignUp.module.css';
-import {useUserStore} from '@/lib/store/userStore';
+import {UserGet, useUserStore} from '@/lib/store/userStore';
 
 const SignUp = () => {
   const router = useRouter();
@@ -19,7 +19,11 @@ const SignUp = () => {
 
     try {
       const newUser = await registration({username, password, email, role});
-      setUser(newUser);
+      setUser({
+        username: newUser.username,
+        email: newUser.email,
+        role: newUser.role,
+      });
       router.push('/');
     } catch {}
   }

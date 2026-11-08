@@ -16,7 +16,7 @@ export const registration = async (data: RegisterProps) => {
 
 interface LoginProps {
   email: string;
-  passwod: string;
+  password: string;
 }
 
 export const login = async (data: LoginProps) => {

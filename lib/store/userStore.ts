@@ -1,4 +1,3 @@
-import {User} from '@/types/user';
 import {create} from 'zustand';
 import {persist} from 'zustand/middleware';
 
@@ -7,9 +6,10 @@ import {persist} from 'zustand/middleware';
 //   email: "",
 // };
 
-interface UserGet {
+export interface UserGet {
   username: string;
   email: string;
+  role: 'customer' | 'seller';
 }
 
 interface userStore {
