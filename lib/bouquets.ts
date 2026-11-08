@@ -1,7 +1,7 @@
 import { BouquetList } from "@/types/bouquet";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://florists-backend.onrender.com";
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 export const getBouquets = async (page: number) => {
   const res = await axios.get<BouquetList>("/bouquets", {

@@ -1,24 +1,27 @@
-import type {NextConfig} from 'next';
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        protocol: "https",
+        hostname: "res.cloudinary.com",
       },
     ],
   },
   async rewrites() {
     return [
-      {source: '/api/:path*', destination: `${process.env.BACKEND_URL}/:path*`},
+      {
+        source: "/api/:path*",
+        destination: `${process.env.NEXT_PUBLIC_BACKEND_URL}/:path*`,
+      },
     ];
   },
   turbopack: {
     rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
     },
   },
@@ -27,7 +30,7 @@ const nextConfig: NextConfig = {
     config.module.rules.push({
       test: /\.svg$/i,
       issuer: /\.[jt]sx?$/,
-      use: ['@svgr/webpack'],
+      use: ["@svgr/webpack"],
     });
     return config;
   },

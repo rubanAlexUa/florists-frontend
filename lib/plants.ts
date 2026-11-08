@@ -6,7 +6,7 @@ import {
 import { Plant, PlantList } from "@/types/plant";
 import axios from "axios";
 
-axios.defaults.baseURL = "https://florists-backend.onrender.com";
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_BACKEND_URL;
 
 interface GetPlantsProps {
   page: number;

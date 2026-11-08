@@ -1,9 +1,13 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useProductsCartStore } from "@/lib/store/cartStore";
 import css from "./OrderSummary.module.css";
+import { createPurchase } from "@/lib/purchases";
 
 const OrderSummary = () => {
+  const router = useRouter();
+
   const totalAmount = useProductsCartStore((state) =>
     state.products.reduce(
       (totalAmount, product) => (totalAmount += product.amount),
@@ -19,6 +23,21 @@ const OrderSummary = () => {
     ),
   );
 
+  const clearOrder = useProductsCartStore((state) => state.clearProducts);
+
+  const handleSubmit = async () => {
+    const { products } = useProductsCartStore.getState();
+    const orderProducts = products.map(({ productId, amount }) => ({
+      productId,
+      amount,
+    }));
+    try {
+      await createPurchase({ products: orderProducts });
+      clearOrder();
+      router.push("/");
+    } catch {}
+  };
+
   return (
     <div className={css["order-summary-box"]}>
       <h2 className={css["summary-heading"]}>Order summary</h2>
@@ -31,7 +50,12 @@ const OrderSummary = () => {
         Total price:{" "}
         <span className={css["total-price-number"]}>{totalPrice}</span>
       </h3>
-      <button className={css["submit-order-button"]}>Submit order</button>
+      <button
+        onClick={() => handleSubmit()}
+        className={css["submit-order-button"]}
+      >
+        Submit order
+      </button>
     </div>
   );
 };
