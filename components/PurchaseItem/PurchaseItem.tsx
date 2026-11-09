@@ -1,6 +1,6 @@
 import css from './PurchaseItem.module.css';
 import {Purchase} from '@/types/purchase';
-import Triangle from '@/public/tringle.svg';
+import Triangle from '@/public/triangle.svg';
 
 type Props = {
   product: Purchase;

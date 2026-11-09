@@ -1,0 +1,12 @@
+.my-orders-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 4px 14px #1c282614;
+}
+
+.my-oders-heading {
+  font-size: 25px;
+}

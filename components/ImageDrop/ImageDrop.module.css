@@ -1,0 +1,34 @@
+.image-drop-place {
+  min-width: 400px;
+  height: 550px;
+  border: 2px dashed gray;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.drop-label {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-download {
+  width: 50px;
+}
+
+.heading-download {
+  font-size: 25px;
+}
+
+.info-downloading {
+  font-size: 15px;
+}
+
+.product-image {
+  object-fit: contain;
+}
