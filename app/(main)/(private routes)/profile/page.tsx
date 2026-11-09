@@ -1,11 +1,15 @@
-import { useUserStore } from "@/lib/store/userStore";
+import ProfileInfo from '@/components/ProfileInfo/ProfileInfo';
+import PurchaseList from '@/components/PurchaseList/PurchaseList';
+import css from './Profile.module.css';
 
 const Profile = () => {
-  const me = useUserStore((state) => state.user);
   return (
-    <>
-      <p>Profile</p>
-    </>
+    <div className="wrapper">
+      <div className={css['customer-content']}>
+        <ProfileInfo />
+        <PurchaseList />
+      </div>
+    </div>
   );
 };
 

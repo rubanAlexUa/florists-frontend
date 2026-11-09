@@ -1,0 +1,59 @@
+.purchases-list-box {
+  flex: 1;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(28, 40, 38, 0.08);
+  border: 5px dashed #3a5a40;
+  display: flex;
+  flex-direction: column;
+}
+
+.purchases-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 500px;
+  overflow-y: scroll;
+  scrollbar-gutter: stable; /* місце під скролбар зарезервоване, ширина не стрибає */
+  scrollbar-width: thin;
+  scrollbar-color: transparent;
+}
+
+.purchase-heading {
+  color: #2a4230;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.description-no-purchases {
+  font-size: 25px;
+}
+
+.svg-smile {
+  width: 50px;
+  fill: #3a5a40;
+}
+.purchase-no-items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: center;
+  flex: 1;
+}
+
+.description-no-purchases {
+  font-size: 25px;
+  line-height: 1.5;
+  color: #5f6f63;
+  max-width: 420px;
+}
+
+.svg-smile {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  color: #3a5a40;
+}

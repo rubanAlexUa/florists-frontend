@@ -1,0 +1,71 @@
+.profile-all-info {
+  padding: 32px 24px 24px 24px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 340px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 14px rgba(28, 40, 38, 0.08);
+}
+
+.profile-email-text {
+  color: gray;
+}
+
+.hr-elem {
+  width: 100%;
+  background-color: gray;
+}
+
+.profile-one-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 20px;
+}
+
+.profile-role {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.profile-username-text {
+  color: black;
+  font-size: 20px;
+}
+
+.profile-svg {
+  width: 100px;
+}
+
+.role-elem {
+  border-radius: 8px;
+  padding: 5px 15px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.role-customer {
+  color: #3a5a40;
+  border: 2px solid #3a5a40;
+}
+
+.role-seller {
+  color: #d97757;
+  border: 2px solid #d97757;
+  border-radius: 8px;
+}
+
+.log-out-button {
+  color: #d97757;
+  border: 2px solid #d97757;
+  padding: 5px 0;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+}

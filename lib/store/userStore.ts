@@ -10,6 +10,7 @@ import {persist} from 'zustand/middleware';
 interface UserGet {
   username: string;
   email: string;
+  role: 'customer' | 'seller';
 }
 
 interface userStore {
