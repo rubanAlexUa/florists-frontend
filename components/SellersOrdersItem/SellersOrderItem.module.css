@@ -1,0 +1,42 @@
+.purchase-item {
+  border-top: 1px solid #fbfb;
+  padding-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.triangle-svg {
+  fill: #3a5a40;
+  stroke: none;
+}
+
+.purchase-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex: 1;
+}
+
+.data-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.data-para {
+  font-size: 15px;
+  color: gray;
+}
+
+.date-number {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.total-price-number {
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 600;
+  color: #c4623f;
+}
