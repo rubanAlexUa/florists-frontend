@@ -1,16 +1,16 @@
-import ProfileInfo from '@/components/ProfileInfo/ProfileInfo';
-import PurchaseList from '@/components/PurchaseList/PurchaseList';
-import css from './Profile.module.css';
-import SellersOrdersBox from '@/components/SellersOrdersBox/SellersOrdersBox';
-import SellerOnly from '@/components/SellerOnly/SellerOnly';
+import ProfileInfo from "@/components/ProfileInfo/ProfileInfo";
+import PurchaseList from "@/components/PurchaseList/PurchaseList";
+import css from "./Profile.module.css";
+import SellersOrdersBox from "@/components/SellersOrdersBox/SellersOrdersBox";
+import SellerBoxesOnly from "@/components/SellerBoxesOnly/SellerBoxesOnly";
 
 const Profile = () => {
   return (
     <div className="wrapper">
-      <SellerOnly>
+      <SellerBoxesOnly>
         <SellersOrdersBox />
-      </SellerOnly>
-      <div className={css['customer-content']}>
+      </SellerBoxesOnly>
+      <div className={css["customer-content"]}>
         <ProfileInfo />
         <PurchaseList />
       </div>
