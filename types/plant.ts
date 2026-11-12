@@ -9,6 +9,7 @@ export interface Plant {
   type: BackendPlantsTypes;
   productImage: string;
   rating: number;
+  state: "active" | "archived";
 }
 
 export interface PlantList {

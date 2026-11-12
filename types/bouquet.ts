@@ -6,7 +6,7 @@ export interface Bouquet {
   description: string;
   price: number;
   flowers: Plant[];
-  state: "active" | "archive";
+  state: "active" | "archived";
   sellerId: string;
   productImage: string;
 }
