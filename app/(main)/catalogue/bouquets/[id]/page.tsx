@@ -1,5 +1,5 @@
 import Image from "next/image";
-import css from "@/app/catalogue/[plantsType]/[id]/Plant.module.css";
+import css from "@/app/(main)/catalogue/[plantsType]/[id]/Plant.module.css";
 import c from "./Bouquet.module.css";
 import AddToCart from "@/components/AddToCart/AddToCart";
 import { getBouquetById } from "@/lib/bouquets";

@@ -5,7 +5,7 @@ import { getPlants } from "@/lib/plants";
 import { useQuery } from "@tanstack/react-query";
 
 import ProductsList from "@/components/ProductsList/ProductsList";
-import css from "@/app/(main)/catalogue/[plantsType]/Plants.module.css";
+import css from "@/app/(main)/catalogue/[plantsType]/[id]/Plant.module.css";
 import { getBouquets } from "@/lib/bouquets";
 import { ProductCardData } from "@/components/ProductCard/ProductCard";
 
