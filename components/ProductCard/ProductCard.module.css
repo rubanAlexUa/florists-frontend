@@ -29,17 +29,24 @@
 .product-price {
   font-size: 14px;
 }
-
 .add-cart-button {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  color: #e5e0d8;
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.add-cart-button:hover {
+  color: #d97757;
+  transform: scale(1.1);
 }
 
 .add-cart-svg {
   width: 50px;
 }
-
 .button-go-cart {
   position: absolute;
   bottom: 10px;
@@ -67,4 +74,12 @@
 .button-go-cart:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(217, 119, 87, 0.3);
+}
+
+.no-products-p {
+  color: #3a5a40;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-right: auto;
+  text-align: end;
 }

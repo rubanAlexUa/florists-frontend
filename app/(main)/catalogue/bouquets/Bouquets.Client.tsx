@@ -5,7 +5,7 @@ import { getPlants } from "@/lib/plants";
 import { useQuery } from "@tanstack/react-query";
 
 import ProductsList from "@/components/ProductsList/ProductsList";
-import css from "@/app/(main)/catalogue/[plantsType]/[id]/Plant.module.css";
+import css from "@/app/(main)/catalogue/[plantsType]/Plants.module.css";
 import { getBouquets } from "@/lib/bouquets";
 import { ProductCardData } from "@/components/ProductCard/ProductCard";
 
@@ -22,12 +22,13 @@ const BouquetsClient = () => {
     href: `/catalogue/bouquets/${bouquet._id}`,
     type: "bouquet",
     amount: 1,
+    state: bouquet.state,
   }));
   return (
     <>
       <div className="wrapper">
         <div className={css["page-info"]}>
-          <h2 className={css["product-heading"]}>Products catalogue</h2>
+          <h2 className="page-heading">Products catalogue</h2>
           <h3 className={css["product-category"]}>Category/bouquets</h3>
         </div>
         <ProductsList products={products} />

@@ -7,16 +7,23 @@ import { useQuery } from "@tanstack/react-query";
 import ProductsList from "@/components/ProductsList/ProductsList";
 import css from "./Plants.module.css";
 import { ProductCardData } from "@/components/ProductCard/ProductCard";
+import { useState } from "react";
+import Pagination from "@/components/Pagination/Pagination";
 
 type Props = {
   type: PlantsTypes;
 };
 
 const PlantsClient = ({ type }: Props) => {
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["products", type],
-    queryFn: () => getPlants({ page: 1, type }),
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const { data, isLoading, isError, isSuccess } = useQuery({
+    queryKey: ["products", type, currentPage],
+    queryFn: () => getPlants({ page: currentPage, type }),
   });
+
+  const totalPages = data?.totalPages ?? 0;
+
   const products = data?.plants.map((plant): ProductCardData => ({
     id: plant._id,
     name: plant.name,
@@ -25,6 +32,7 @@ const PlantsClient = ({ type }: Props) => {
     href: `/catalogue/${type}/${plant._id}`,
     type: plant.type,
     amount: 1,
+    state: plant.state,
   }));
   return (
     <>
@@ -34,6 +42,13 @@ const PlantsClient = ({ type }: Props) => {
           <h3 className={css["product-category"]}>Category/{type}</h3>
         </div>
         <ProductsList products={products} />
+        {totalPages !== 0 && isSuccess && (
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            onChange={setCurrentPage}
+          />
+        )}
       </div>
     </>
   );

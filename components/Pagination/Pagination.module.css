@@ -1,22 +1,26 @@
 .pagination {
   display: flex;
   justify-content: center;
-  gap: 4px;
-  margin: 16px 0;
-  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 50px 0 20px;
   padding: 0;
-  margin: 0;
+  list-style: none;
 }
 
 .pagination li {
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #e5e0d8;
+  border-radius: 50%;
   cursor: pointer;
-  min-width: 36px;
-  height: 36px;
   transition:
     background-color 0.2s ease,
-    color 0.2s ease;
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .pagination li a {
@@ -25,25 +29,53 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  text-decoration: none;
-  color: #0d6efd;
-  font-size: 14px;
+  padding: 0 6px;
+  color: #d97757;
+  font-size: 15px;
+  outline: none;
+  transition: color 0.2s ease;
 }
 
 .pagination li:hover {
-  background-color: #e9ecef;
+  border-color: #d97757;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(217, 119, 87, 0.25);
+}
+
+.pagination li.active {
+  background-color: #d96857;
+  border-color: #d96857;
+  box-shadow: 0 3px 8px rgba(217, 119, 87, 0.35);
+}
+
+.pagination li.active a {
+  color: #fff;
+  font-weight: 800;
 }
 
 .pagination li.active:hover {
-  background-color: #0d6efd;
+  background-color: #c4623f;
+  border-color: #c4623f;
+  transform: none;
 }
 
-.active {
-  background-color: #0d6efd;
-  border-color: #0d6efd;
+.pagination li.disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
 }
 
-.active a {
-  color: #fff !important;
-  font-weight: 500;
+.pagination li.break {
+  border-color: transparent;
+  background: transparent;
+  cursor: default;
+}
+
+.pagination li.break:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.pagination li:focus-within {
+  border-color: #1c2826;
 }

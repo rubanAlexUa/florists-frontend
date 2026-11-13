@@ -84,18 +84,18 @@ const AddToCart = ({ product, type }: Props) => {
               />
             </svg>
           </button>
-          <ButtonAddToCart
-            cartProduct={{
-              name,
-              productId,
-              productImage,
-              pricePerOne,
-              amount,
-              type,
-            }}
-          />
         </div>
       </div>
+      <ButtonAddToCart
+        cartProduct={{
+          name,
+          productId,
+          productImage,
+          pricePerOne,
+          amount,
+          type,
+        }}
+      />
     </>
   ) : (
     <ButtonToCart />

@@ -15,6 +15,8 @@ const PlantIdPage = async ({ params }: Props) => {
   const plantURL = plant.productImage
     ? plant.productImage
     : "/default-plant-img.png";
+
+  const archived = plant.state === "archived";
   return (
     <div className="wrapper">
       <div className={css["main-info"]}>
@@ -39,16 +41,20 @@ const PlantIdPage = async ({ params }: Props) => {
             <h3 className={css["description-heading"]}>Description: </h3>
             <p className={css["plant-description"]}>{plant.description}</p>
           </div>
-          <AddToCart
-            product={{
-              productId: id,
-              name: plant.name,
-              productImage: plantURL,
-              pricePerOne: plant.price,
-              availableAmount: plant.amount,
-            }}
-            type={type}
-          />
+          {!archived ? (
+            <AddToCart
+              product={{
+                productId: id,
+                name: plant.name,
+                productImage: plantURL,
+                pricePerOne: plant.price,
+                availableAmount: plant.amount,
+              }}
+              type={type}
+            />
+          ) : (
+            <p className={css["no-product-p"]}>Product is out of stock!</p>
+          )}
         </div>
       </div>
     </div>

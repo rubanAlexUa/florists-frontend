@@ -64,7 +64,7 @@ const ProductCard = ({
           <p className={css["product-price"]}>${price}</p>
         </div>
       </Link>
-      {state != "archived" ? (
+      {!archived ? (
         !isInProducts ? (
           <button
             className={css["add-cart-button"]}
@@ -87,7 +87,7 @@ const ProductCard = ({
           </Link>
         )
       ) : (
-        <p>Out of stock!</p>
+        <p className={css["no-products-p"]}>Out of stock!</p>
       )}
     </li>
   );

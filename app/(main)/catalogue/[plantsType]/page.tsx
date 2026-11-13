@@ -15,8 +15,8 @@ const PlantsPage = async ({ params }: Props) => {
   const { plantsType } = await params;
 
   const queryClient = new QueryClient();
-  await queryClient.query({
-    queryKey: ["plants", plantsType],
+  await queryClient.prefetchQuery({
+    queryKey: ["plants", plantsType, 1],
     queryFn: () => getPlants({ page: 1, type: plantsType }),
   });
 
