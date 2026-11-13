@@ -46,7 +46,13 @@
 
 .add-cart-svg {
   width: 50px;
+  stroke: white;
 }
+
+.add-cart-svg circle {
+  stroke: none;
+}
+
 .button-go-cart {
   position: absolute;
   bottom: 10px;
@@ -54,7 +60,6 @@
   border-radius: 8px;
   padding: 5px 20px;
   font-weight: 800;
-  color: white;
   background-color: #d96857;
   border: none;
   letter-spacing: 1px;

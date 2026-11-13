@@ -1,0 +1,55 @@
+.hero-wrapper {
+  margin-top: -20px;
+  min-height: calc(100svh - 90px); /* 90px = висота твого хедера */
+  display: flex;
+  align-items: center;
+  padding: 0 clamp(20px, 5vw, 64px);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(42, 66, 48, 0.92) 0%,
+      rgba(42, 66, 48, 0.65) 35%,
+      rgba(42, 66, 48, 0) 70%
+    ),
+    url(../../public/hero.jfif) 65% center / cover no-repeat;
+  color: #fff;
+}
+
+.hero-heading {
+  max-width: 11ch;
+  margin: 0 0 20px;
+  font-size: clamp(40px, 6.5vw, 76px);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.hero-p {
+  max-width: 34ch;
+  margin: 0 0 32px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-profile-link,
+.hero-products-link {
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.hero-products-link {
+  background: #b5532f;
+  border: 1px solid #b5532f;
+  color: #fff;
+}
+
+.hero-profile-link {
+  border: 1px solid #fff;
+  color: #fff;
+}

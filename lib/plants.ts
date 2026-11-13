@@ -36,4 +36,6 @@ export const createPlant = async (formData: FormData) => {
   return res.data;
 };
 
-//export const updatePlant = async ({productId: string, })
+export const updatePlant = async (id: string, formData: FormData) => {
+  const res = await api.put(`/plants/${id}`, formData);
+};

@@ -78,3 +78,10 @@ table {
   font-weight: 400;
   color: #1c2826;
 }
+
+.box-heading {
+  font-size: 25px;
+  font-weight: 400;
+  color: #1c2826;
+  margin-bottom: 15px;
+}

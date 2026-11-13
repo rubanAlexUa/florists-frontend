@@ -1,0 +1,8 @@
+.my-products-box {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  box-shadow: rgba(28, 40, 38, 0.08) 0px 4px 14px;
+  border-radius: 20px;
+}
