@@ -37,5 +37,5 @@ export const createPlant = async (formData: FormData) => {
 };
 
 export const updatePlant = async (id: string, formData: FormData) => {
-  const res = await api.put(`/plants/${id}`, formData);
+  const res = await api.patch(`/plants/${id}`, formData);
 };
